@@ -20,6 +20,8 @@ public class OpenJMSDriver {
 			receiverno = Integer.valueOf(s[1]); 
 			nomsgs = Integer.valueOf(s[2]); 
 		}
+		System.out.println("args reported by openjms are: " + senderno + " " + receiverno + " " + nomsgs);
+		
 	   	start = new CountDownLatch(senderno+receiverno);
 	   	end = new CountDownLatch(receiverno);
 	   	s = new String[] {"queue1",Integer.toString(nomsgs),Integer.toString(senderno)};
